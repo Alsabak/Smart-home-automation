@@ -1,0 +1,61 @@
+https://blrl.blynk.cloud/external/api/update?token=qRfqcFvtr9KHa5utmXaga0KhYvxxeqAT&D4=1
+
+https://blrl.blynk.cloud/external/api/update?token=qRfqcFvtr9KHa5utmXaga0KhYvxxeqAT&D4=0
+
+
+655df63f12725f7054a79220       - id
+
+3fc872a5-f663-49c0-a7e3-6249a5501507     -key
+
+15524e40-cc8f-46d5-878d-f802b60d6434-63025f3f-e0c9-4984-914d-6a2c608f6253  -----secret
+
+
+3fc872a5-f663-49c0-a7e3-6249a5501507
+
+
+
+
+
+
+
+
+
+
+
+
+/* Comment this out to disable prints and save space */
+#define BLYNK_PRINT Serial
+
+/* Fill-in your Template ID (only if using Blynk.Cloud) */
+//#define BLYNK_TEMPLATE_ID   "YourTemplateID"
+#define BLYNK_TEMPLATE_ID "TMPL3M1oHWgfO"
+#define BLYNK_TEMPLATE_NAME "Home automation using google assistant"
+#define BLYNK_AUTH_TOKEN "qRfqcFvtr9KHa5utmXaga0KhYvxxeqAT"
+
+#include <ESP8266WiFi.h>
+#include <BlynkSimpleEsp8266.h>
+
+// You should get Auth Token in the Blynk App.
+// Go to the Project Settings (nut icon).
+char auth[] = BLYNK_AUTH_TOKEN;
+
+// Your WiFi credentials.
+// Set password to "" for open networks.
+char ssid[] = "";
+char pass[] = "";
+
+void setup()
+{
+  // Debug console
+  Serial.begin(9600);
+
+  Blynk.begin(auth, ssid, pass);
+  // You can also specify server:
+  //Blynk.begin(auth, ssid, pass, "blynk-cloud.com", 80);
+  //Blynk.begin(auth, ssid, pass, IPAddress(192,168,1,100), 8080);
+}
+
+void loop()
+{
+  Blynk.run();
+}
